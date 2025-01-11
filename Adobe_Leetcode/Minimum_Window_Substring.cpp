@@ -3,59 +3,6 @@
 #include<string>
 using namespace std;
 
-// class Solution {
-// public:
-//     string minWindow(string s, string t)
-//     {
-//         int n1 = s.length();
-//         int n2 = t.length();
-//         vector<int> targetFreq;
-//         vector<int> sourceFreq;
-//         for(char ch : t)
-//         {
-//             targetFreq[ch-'A']++;
-//         }
-//         int count1 = 0;
-//         for(int i = 0; i < 26; i++)
-//         {
-//             if(targetFreq[i] != 0)
-//             {
-//                 count1++;
-//             }
-//         }
-//         int i, j, len, minLen;
-//         i = j = 0;
-//         len = minLen = n2;
-//         int count2 = 0;
-//         string str = "";
-//         while(j < n2)
-//         {
-//             sourceFreq[s[j] - 'A']++;
-//             if(sourceFreq[s[j]-'A'] >= targetFreq[s[j]-'A'])
-//             {
-//                 count2++;
-//             }
-//             if(count2 >= count1)
-//             {
-//                 while(i <= j)
-//                 {
-//                     if(sourceFreq[s[i]-'A']-- >= targetFreq[s[i]-'A'])
-//                     {
-//                         i++;
-//                     }
-//                     else{
-//                         break;
-//                     }
-//                 }
-//             }
-//             len = j - i + 1;
-//             minLen = min(minLen, len);
-//             str = s.substr(j - minLen + 1, j);
-//         }
-//         return str;
-//     }
-// };
-
 class Solution {
 public:
     string minWindow(string s, string t)
